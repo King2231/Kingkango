@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kinkango</title>
+
+<!--bootstrap links-->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!---->
+
+<!--csslinks-->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="css/demo.css">
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8" />
+<!---->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="img/logo.jpg" type="favicon/ico" />
+
+<!--other links-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#menu a').each(function(){
+        id = $(this).attr('href');
+        id = id.substring(id.lastIndexOf('/'));
+        id = id.substring(0,id.indexOf('.'));
+        $(this).attr('rel',id);
+    });
+    $('#index').show();
+    $('#menu a').click(function(e){
+        e.preventDefault();
+        $('.content').hide();
+        $('#'+$(this).attr('rel')).show();
+        location.hash = '#!/'+$(this).attr('rel');
+        return false;
+    });
+});
+</script>
+<style type="text/css">
+.content {
+    display: none;
+}
+</style>
+</head>
+<body style="height:1500px">
+<!----start-header---->
+
+ <div class="jumbotron"> 
+    <div class="container">
+        <h1>  </h1>
+    </div>
+  </div>
+<!--<div class="header" id="home">
+    <div class="container">-->
+<div class="container">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">  
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+          <a class="navbar-brand" href="#"><b>KINGKANGO</b></a>
+  </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav" id="menu" >
+       <li><a href="home.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="gallery.html">Gallery</a></li>
+       <li><a href="contact.html">Contact</a></li>
+     </ul>
+  <ul class="nav navbar-nav navbar-right">
+        <li><a href="Add_Client.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="Login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<!----end-header---->
+
+<!--HOME-->
+<!--welcome-starts--> 
+<div id="index" class="content">
+<div class="welcome">
+		<div class="container">
+			<div class="welcome-top">
+				<h1>Welcome To Our Site</h1>
+				<p> Maecenas ornare lobortis mi id dapibus. Sed magna leo, malesuada in luctus ut, convallis nec sapien. Nulla rhoncus, nunc sollicitudin sodales elementum, augue nunc congue tellus, a varius urna odio vitae mauris. Aenean ultricies porttitor dui quis laoreet.</p>
+			</div>
+			<div class="welcome-bottom">
+				<div class="col-md-6 welcome-left">
+					<h3>Aenean ultricies porttitor</h3>
+					<p>Integer tincidunt ligula id lacinia placerat. Etiam rutrum fermentum tortor. Nunc tempor dui nec tincidunt eleifend. Phasellus lacinia gravida mollis. Curabitur laoreet ligula tempus, elementum dui quis, malesuada velit. Nullam cursus a magna vitae vestibulum.</p>
+					<div class="welcome-one">
+						
+          <div class="col-md-6 welcome-one-left"> </div>
+						
+          <div class="col-md-6 welcome-one-right"> </div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-md-6 welcome-left">
+					<h3>Nullam mattis nibh dolor</h3>
+					<p>Integer tincidunt ligula id lacinia placerat. Etiam rutrum fermentum tortor. Nunc tempor dui nec tincidunt eleifend. Phasellus lacinia gravida mollis. Curabitur laoreet ligula tempus, elementum dui quis, malesuada velit. Nullam cursus a magna vitae vestibulum.</p>
+					
+        <div class="welcome-one"> </div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+</div>
+<!--welcome-ends-->
+<div class="content">
+	 <div class="container">
+			<div class="content-slogan">
+				<p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. sed  incididunt ut <a href="#">labore</a> et dolore magna aliqua. Ut enim ad <a href="#">minim veniam.</a> </p>
+			</div>
+			<div class="slogan-sub">
+					<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+				</div>
+			<div class="clearfix"> </div>
+			<div class="grids">
+				<div class="section group">
+				<div class="col-md-4 images_1_of_3">
+					  <img src="images/g1.png">
+					  <h3>Our profile</h3>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				     <div class="button"><span><a href="about.html">Read More</a></span></div>
+				</div>
+				<div class="col-md-4 images_1_of_3">
+					  <img src="images/g2.png">
+					  <h3>Care advices</h3>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				     <div class="button"><span><a href="about.html">Read More</a></span></div>
+				</div>
+				<div class="col-md-4 images_1_of_3">
+					  <img src="images/g3.png">
+					  <h3>Emergency</h3>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				     <div class="button"><span><a href="about.html">Read More</a></span></div>
+				</div>
+			</div>
+			</div>
+	 </div>
+</div>
+<!--nature-starts--> 
+<div class="nature">
+		<div class="container">
+			<div class="nature-top">
+				<h3>Maecenas ornare lobortis</h3>
+				<p>Phasellus tempor erat id erat gravida pulvinar. Aenean est felis, ullamcorper et volutpat sed, cursus at enim. Vestibulum vel finibus neque. In sed magna tellus.</p>
+			</div>
+		</div>
+</div>
+<!--nature-ends-->
+<!--field-starts--> 
+<div class="fields">
+		<div class="container">
+			<div class="fields-top">
+				<div class="col-md-4 fields-left">
+					<span class="home"></span>
+					<h4>Vestibulum vel finibus</h4>
+					<p>Pellentesque sed sem bibendum, rutrum ipsum vitae, facilisis turpis. Mauris vitae metus gravida, hendrerit erat ac, facilisis ligula.</p>
+				</div>
+				<div class="col-md-4 fields-left">
+					<span class="men"></span>
+					<h4>Quisque non ligula</h4>
+					<p>Pellentesque sed sem bibendum, rutrum ipsum vitae, facilisis turpis. Mauris vitae metus gravida, hendrerit erat ac, facilisis ligula.</p>
+				</div>
+				<div class="col-md-4 fields-left">
+					<span class="pen"></span>
+					<h4>Lorem ipsum dolor</h4>
+					<p>Pellentesque sed sem bibendum, rutrum ipsum vitae, facilisis turpis. Mauris vitae metus gravida, hendrerit erat ac, facilisis ligula.</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+</div>
+<!--field-end--> 
+</div>
+<!--HOME ENDS-->
+ 
+<!--GALLERY STARTS-->
+<div id="gallery" class="content">
+<!--light-box-files -->
+		<script src="js/jquery.chocolat.js"></script>
+		
+		<!--light-box-files -->
+		<script type="text/javascript">
+		$(function() {
+			$('.gallery-bottom a').Chocolat();
+		});
+		</script>
+	<!--gallery-starts--> 
+	<div class="gallery">
+		<div class="container">
+			<div class="gallery-top heading">
+				<h1>Our Gallery</h1>
+			</div>
+			<div class="gallery-bottom">
+				<div class="gallery-1">
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-1.jpg">
+							<img class="lazyOwl" src="images/port-1.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-2.jpg">
+							<img class="lazyOwl" src="images/port-2.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-5.jpg">
+							<img class="lazyOwl" src="images/port-5.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-6.jpg">
+							<img class="lazyOwl" src="images/port-6.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="gallery-1">
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-3.jpg">
+							<img class="lazyOwl" src="images/port-3.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-4.jpg">
+							<img class="lazyOwl" src="images/port-4.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-9.jpg">
+							<img class="lazyOwl" src="images/port-9.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-10.jpg">
+							<img class="lazyOwl" src="images/port-10.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="gallery-1">
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-11.jpg">
+							<img class="lazyOwl" src="images/port-11.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-12.jpg">
+							<img class="lazyOwl" src="images/port-12.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-7.jpg">
+							<img class="lazyOwl" src="images/port-7.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="col-md-3 gallery-left">
+						<a href="images/port-8.jpg">
+							<img class="lazyOwl" src="images/port-8.jpg" alt="name" />
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--GAllERY ENDS-->
+
+<!--CONTACT STARTS-->
+<div id="contact" class="content">
+<!--contact-starts-->
+	<div class="contact">
+		<div class="container">
+			<div class="contact-top">
+				<div class="col-md-4 contact-left heading">
+					<h1>Contact Us</h1>
+					<p>Lorem ipsum dolsit met consetuer adipiscing dolor.</p>
+				</div>
+				<div class="col-md-8 contact-right">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103344.96318068985!2d-83.9250825!3d35.9584634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885c162246ce42a9%3A0x7bea92dac4f534c5!2sKnoxville%2C+TN%2C+USA!5e0!3m2!1sen!2sin!4v1434174666221" frameborder="0" style="border:0"></iframe>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="contact-bottom">
+				<div class="col-md-4 contact-left heading">
+					<h2>Contact Form</h2>
+					<p>Lorem ipsum dolsit met consetuer adipiscing dolor.</p>
+				</div>
+				<div class="col-md-8 contact-right">
+					<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" />
+					<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
+					<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+						<div class="submit-btn">
+							<form>
+								<input type="submit" value="SUBMIT">
+							</form>
+						</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!----contact-end---->
+</div>
+<!--CONTACT ENDS-->
+
+<!--ABOUT STARTS-->
+<div id="about" class="content">
+<!--about-starts--> 
+	<div class="about">
+		<div class="container">
+			<div class="about-top heading">
+				<h1>About Us</h1>
+				<h4>Cum sociis natoque penatibus et magnis dis parturient montes , nascetur ridiculus mus.</h4>
+				<p class="abt_text">Cum sociis natoque ridiculus etiam et dignissim augue, et sagittis turpis. Vestibulum congue turpis ac tincidunt accumsan. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orc i ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. </p>
+				<div class="about-bottom">
+					<div class="col-md-4 about-left">
+						<a href="single.html"><img src="images/abt-1.jpg" alt="" /></a>
+						<h5><a href="single.html">What We Do</a></h5>
+						<p>Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Vestibulum congue turpis ac tincidunt accumsan.</p>
+					</div>
+					<div class="col-md-4 about-left">
+						<a href="single.html"><img src="images/abt-2.jpg" alt="" /></a>
+						<h5><a href="single.html">Our Standards</a></h5>
+						<p>Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Vestibulum congue turpis ac tincidunt accumsan.</p>
+					</div>
+					<div class="col-md-4 about-left">
+						<a href="single.html"><img src="images/abt-3.jpg" alt="" /></a>
+						<h5><a href="single.html">Our Capabilities</a></h5>
+						<p>Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Vestibulum congue turpis ac tincidunt accumsan.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<!--advantages-starts--> 
+	<div class="advantages">		
+			<div class="col-md-6 advantages-left heading">
+				<h3>Our Advantages</h3>
+				<div class="advn-one">
+						<div class="ad-mian">
+							<div class="ad-left">
+								<p>1</p>
+							</div>
+							<div class="ad-right">
+								<h4><a href="single.html">Elacus a porta varius dui</a></h4>
+								<p>In neque arcu, vulputate vitae dignissim id, placerat adipiscing lorem. Nulla consectetur adipiscing metus vel pulvinar. Aenean molestie mauris non diam tincidunt faucibus. </p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="ad-mian">
+							<div class="ad-left">
+								<p>2</p>
+							</div>
+							<div class="ad-right">
+								<h4><a href="single.html">Elacus a porta varius dui</a></h4>
+								<p>In neque arcu, vulputate vitae dignissim id, placerat adipiscing lorem. Nulla consectetur adipiscing metus vel pulvinar. Aenean molestie mauris non diam tincidunt faucibus. </p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="ad-mian">
+							<div class="ad-left">
+								<p>3</p>
+							</div>
+							<div class="ad-right">
+								<h4><a href="single.html">Elacus a porta varius dui</a></h4>
+								<p>In neque arcu, vulputate vitae dignissim id, placerat adipiscing lorem. Nulla consectetur adipiscing metus vel pulvinar. Aenean molestie mauris non diam tincidunt faucibus. </p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+			</div>
+			<div class="col-md-6 advantages-left heading">
+				<h3>Our Skills</h3>
+				<div class="advn-two">
+							<h4>Erci eu tincidunt lacinia, elit quam ultri ces ipsum, quis ultricies ipsum ante</h4>
+							<p>Donec sagittis interdum tellus sed bibendum. Aen ean fringilla ut lacus eu vehicula. Curabitur non nibh quis nisi vestibulum aliquet non sed dolor. Ut est risus, consectetur sit amet pretium in, cursus in dui. Donec ac rhoncus libero.</p>
+							<ul>
+								<li><a href="#">Praesent vestibulum molestie lacus</a></li>
+								<li><a href="#">Donec sagittis interdum tellus</a></li>
+								<li><a href="#">Nulla consectetur adipiscing</a></li>
+								<li><a href="#">Donec ac rhoncus libero.</a></li>
+								<li><a href="#">Erci eu tincidunt lacinia</a></li>
+							</ul>
+				</div>
+			</div>
+		 <div class="clearfix"></div>
+		 <div class="works">
+			  <h3>Our Team</h3>	  
+			  <div class="grid_4">
+				<div class="text1">
+						   <img src="images/t1.jpg" alt="">
+						   <h4>Phasellus scipitilifen lus.</h4>
+						  <p>Kuspendisse laoreet augue iderti wer  interdum merti oremolo lectusto odio, sedorolu fringilla estero libero. </p>
+					  </div>
+			  </div>
+			  <div class="grid_4">
+				 <div class="text1">
+						   <img src="images/t2.jpg" alt="">
+						   <h4>Phasellus scipitilifen lus.</h4>
+						  <p>Kuspendisse laoreet augue iderti wer  interdum merti oremolo lectusto odio, sedorolu fringilla estero libero. </p>
+					  </div>
+			  </div>
+			  <div class="grid_4 span66">
+				<div class="text1">
+						   <img src="images/t3.jpg" alt="">
+						   <h4>Phasellus scipitilifen lus.</h4>
+						  <p>Kuspendisse laoreet augue iderti wer  interdum merti oremolo lectusto odio, sedorolu fringilla estero libero. </p>
+					  </div>
+			  </div>      
+			  <div class="grid_4 span66">				 
+					  <div class="text1">
+						   <img src="images/t4.jpg" alt="">
+						   <h4>Phasellus scipitilifen lus.</h4>
+						  <p>Kuspendisse laoreet augue iderti wer  interdum merti oremolo lectusto odio, sedorolu fringilla estero libero. </p>
+					  </div>					  
+				 </div>
+		 </div>
+			<div class="clearfix"></div>	 
+</div>
+<!--advantages-end--> 
+		</div>
+	</div>
+	<!----about-end---->	
+</div>
+<!--ABOUT ENDS-->
+
+<!--BLOG STARTS-->
+<div id="blog" class="content">
+<!--blog-->
+	<div class="blog">
+		<div class="container">
+			<div class="blog-head heading">
+				<h1>Blog</h1>
+			</div>	
+			<div class="blog-top">
+				<div class="col-md-9 blog-left">
+					<div class="blog-main">
+						<a href="single.html" class="bg">Donec hendrerit facilisis ultricies fringilla nisl rhoncus.</a>
+						<p>Post by <a href="#">Admin</a> on saturday, March 02, 2015  <a href="#">5 comments</a></p>
+					</div>
+					<div class="blog-main-one">
+						<div class="blog-one">
+							<div class="col-md-5 blog-one-left">
+								<a href="single.html"><img src="images/blog-1.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-7 blog-one-left">
+								<p>Nunc quis turpis sed tortor viverra dictum. Etiam in cursus libero, ut cursus turpis. Nulla quis nulla pellentesque, commodo lorem sed, ultrices leo. Duis magna mauris, cursus vitae lacus ut, consequat malesuada magna. Duis bibendum pellentesque nisi eget volutpat.
+									 Nunc rhoncus ultrices lectus.Aliquam eu dui quis orci ultrices eleifend ut non massa. Duis commodo, ante in vulputate iaculis.</p>
+								<div class="b-btn">
+									<a href="single.html">Read more</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>	
+						<div class="blog-comments">
+								<ul>
+									<li><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><a href="#">Uncategorized</a></li>
+									<li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p>March 13,2014</p></li>
+									<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#">Admin</a></li>
+								</ul>
+								<div class="clearfix"></div>
+						</div>	
+					</div>
+					<div class="blog-main blg_sec">
+						<a href="single.html" class="bg">Donec hendrerit facilisis ultricies fringilla nisl rhoncus.</a>
+						<p>Post by <a href="#">Admin</a> on saturday, March 02, 2015  <a href="#">5 comments</a></p>
+					</div>
+					<div class="blog-main-one">
+						<div class="blog-one">
+							<div class="col-md-5 blog-one-left">
+								<a href="single.html"><img src="images/blog-2.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-7 blog-one-left">
+								<p>Nunc quis turpis sed tortor viverra dictum. Etiam in cursus libero, ut cursus turpis. Nulla quis nulla pellentesque, commodo lorem sed, ultrices leo. Duis magna mauris, cursus vitae lacus ut, consequat malesuada magna. Duis bibendum pellentesque nisi eget volutpat.
+									 Nunc rhoncus ultrices lectus.Aliquam eu dui quis orci ultrices eleifend ut non massa. Duis commodo, ante in vulputate iaculis.</p>
+								<div class="b-btn">
+									<a href="single.html">Read more</a>
+								</div>	
+							</div>
+							<div class="clearfix"></div>
+						</div>	
+						<div class="blog-comments">
+								<ul>
+									<li><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><a href="#">Uncategorized</a></li>
+									<li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p>march 13,2014</p></li>
+									<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#">Admin</a></li>
+								</ul>
+								<div class="clearfix"></div>
+						</div>	
+					</div>
+					<div class="blog-main blg_sec">
+						<a href="single.html" class="bg">Donec hendrerit facilisis ultricies fringilla nisl rhoncus.</a>
+						<p>Post by <a href="#">Admin</a> on saturday, March 02, 2015  <a href="#">5 comments</a></p>
+					</div>
+					<div class="blog-main-one">
+						<div class="blog-one">
+							<div class="col-md-5 blog-one-left">
+								<a href="single.html"><img src="images/blog-3.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-7 blog-one-left">
+								<p>Nunc quis turpis sed tortor viverra dictum. Etiam in cursus libero, ut cursus turpis. Nulla quis nulla pellentesque, commodo lorem sed, ultrices leo. Duis magna mauris, cursus vitae lacus ut, consequat malesuada magna. Duis bibendum pellentesque nisi eget volutpat.
+									 Nunc rhoncus ultrices lectus.Aliquam eu dui quis orci ultrices eleifend ut non massa. Duis commodo, ante in vulputate iaculis.</p>
+								<div class="b-btn">
+									<a href="single.html">Read more</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>	
+						<div class="blog-comments">
+								<ul>
+									<li><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><a href="#">Uncategorized</a></li>
+									<li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p>march 13,2014</p></li>
+									<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#">Admin</a></li>
+								</ul>
+								<div class="clearfix"></div>
+						</div>	
+					</div>	
+				</div>
+				<div class="col-md-3 blog-right">
+					<div class="categories">
+						<h2>Categories</h2>
+						<ul>
+							<li><a href="#">Aenean tortor orci</a></li>
+							<li><a href="#">Duis bibendum pellentesquev</a></li>
+							<li><a href="#">Quisque pharetra semper</a></li>
+							<li><a href="#">Cras condimentum risus</a></li>
+							<li><a href="#"> Quisque id erat sapien</a></li>
+						</ul>
+					</div>
+					<div class="categories">
+						<h3>Recent Posts</h3>
+						<ul>
+							<li><a href="#">Fusce id volutpat est</a></li>
+							<li><a href="#">Phasellus condimentum odio</a></li>
+							<li><a href="#">Donec interdum eros elit</a></li>
+							<li><a href="#">Cras condimentum risus</a></li>
+							<li><a href="#">Proin sodales diam ac </a></li>
+						</ul>
+					</div>
+					<div class="categories">
+						<h3>Archives</h3>
+						<ul>
+							<li><a href="#">March 3014</a></li>
+							<li><a href="#">May 2014</a></li>
+							<li><a href="#">August 2014</a></li>
+							<li><a href="#">October 2014</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<nav>
+			  <ul class="pagination">
+				<li>
+				  <a href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				  </a>
+				</li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li>
+				  <a href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				  </a>
+				</li>
+			  </ul>
+			</nav>
+	</div>
+</div>
+<!--blog-->
+</div>
+<!--BLOG ENDS-->
+<!--footer-->
+<div class="footer">
+	  <div class="copy">
+	    <div class="container">
+			  
+                          <center> 
+                          <table>
+                               <tr> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td>  </td> <td>  </td><td>  </td><td>  </td> </tr>
+                               <tr>    
+                                   <td colspan="6"><h1>&nbsp;Please do Visit us at: &nbsp;</h1></td>
+                                   <td>&nbsp;<a href="https://www.facebook.com/" class="icon icon-mono facebook" title="facebook">facebook</a>&nbsp;</td>
+                                   <td>&nbsp;<a href="https://twitter.com/?lang=en" class="icon icon-mono twitter" title="twitter">twitter</a>&nbsp;</td>
+                                   <td>&nbsp;<a href="https://plus.google.com/" class="icon icon-mono googleplus" title="Google+">google+</a>&nbsp;</td>                             
+                               </tr>
+                             </table>
+                          </center>
+                           
+             </div>
+             <br> <p>Copyright &copy; KINGKANGO</p>
+	  </div>
+	 </div>
+ <!--footer-->		
+<script type="text/javascript">
+		$("h1").fitText(1.1, { minFontSize: '25px', maxFontSize: '75px' });
+	</script>
+</body>
+</html>

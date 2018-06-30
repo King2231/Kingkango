@@ -1,0 +1,29 @@
+/* 
+    Document   : signup
+    Created on : 21-Feb-2016, 16:02:19
+    Author     : King
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+body
+{
+  margin: 0px;
+  padding: 0px;
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:100% 100%;
+}
+.login{
+     text-align:center;
+  color:#ffffff;
+padding:1em;
+text-shadow: 0px 0px 0px #000fff;
+font-size:20px;
+letter-spacing: 20px;
+font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
